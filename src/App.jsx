@@ -1,5 +1,6 @@
 import React from 'react'
 import Search from './components/search/Search'
+import CurrentWeather from './components/current-weather/CurrentWeather'
 
 const handleOnSearchChange = (searchData) => {
  console.log(searchData)
@@ -12,6 +13,7 @@ const App = () => {
     <div className="w-11/12 sm:w-4/6 lg:w-3/6 mx-auto">
       <Search   
         onSearchChange={handleOnSearchChange}/>
+      <CurrentWeather/>
 
     </div>
     </div>

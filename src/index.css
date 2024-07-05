@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .row {
+        @apply flex justify-between;
+    } 
+    .label {
+        @apply text-left font-normal text-sm;
+    }
+    .value {
+        @apply text-right font-semibold text-sm;
+    
+    }
+}
