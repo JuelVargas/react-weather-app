@@ -1,6 +1,7 @@
 import React from 'react'
 import Search from './components/search/Search'
 import CurrentWeather from './components/current-weather/CurrentWeather'
+import Forecast from './components/forecast/Forecast'
 import { WeatherApiUrl, WeatherApiKey } from './api'
 import { useState } from 'react'
 
@@ -28,9 +29,6 @@ const App = () => {
       .catch((err) => console.log(err))
 
   }
-
-  console.log(currentWeather);
-  console.log(forecast);
   
   return (
     <div className='w-full max-w-[1080px] mx-auto my-4'>
@@ -40,7 +38,7 @@ const App = () => {
           onSearchChange={handleOnSearchChange} />
         {currentWeather && <CurrentWeather data={currentWeather} />}
 
-
+        {forecast &&<Forecast data={forecast}/>}
       </div>
     </div>
   )
